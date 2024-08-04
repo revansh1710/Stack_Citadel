@@ -1,0 +1,48 @@
+<div class="card mt-5 shadow-effect">
+  <div class="card-body">
+    <h1 class="text-center mb-4">Leave a Feedback</h1>
+    <p class="text-center">You can leave feedback using this form</p>
+    <form class="mb-5 mt-5" (ngSubmit)="onSubmit(commentForm)"#commentForm="ngForm">
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control shadow-effect"
+            placeholder="Enter your name here"
+            name="name"
+            #name="ngModel"
+            ngModel
+            required
+            [ngClass]="{'is-invalid': name.touched && name.invalid}"
+          />
+          <div class="text-danger" *ngIf="name.touched && name.invalid">
+            <div *ngIf="name.errors?.['required']">Name is required</div>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="comment">Comment</label>
+          <textarea
+            id="comment"
+            cols="30"
+            rows="5"
+            class="form-control shadow-effect"
+            placeholder="Add your feedback here"
+            name="comment"
+            #comment="ngModel"
+            ngModel
+            required
+            [ngClass]="{'is-invalid': comment.touched && comment.invalid}"
+          ></textarea>
+          <div class="text-danger" *ngIf="comment.touched && comment.invalid">
+            <div *ngIf="comment.errors?.['required']">Feedback is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-info btn-sm" [disabled]="commentForm.invalid">Add Feedback</button>
+      </div>
+    </form>
+  </div>
+</div>

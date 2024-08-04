@@ -1,0 +1,25 @@
+/* Custom CSS for table layout */
+.table th {
+    text-align: center;
+}
+
+.btnalign {
+    display: block;
+    margin-top: 2px; /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+    .table th:nth-child(7),
+    .table td:nth-child(7) {
+        display: none;
+    }
+}
+
+.actions-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+   
+}

@@ -1,0 +1,29 @@
+<section class="featured-section" style="background-color: #026467;">
+    <div class="container-fluid px-3">
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-12">
+                <h2 class="text-white">Featured Posts</h2>
+                <p class="text-white">
+                    You can read our Featured Posts from here
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3 px-2" *ngFor="let featuredPost of featuredPostArray">
+                <app-post-card [postData]='featuredPost'></app-post-card>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="col-12 text-center">
+        <h2>Latest Posts</h2>
+        <p>You can read our Latest Posts from here</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4 mt-3 px-2" *ngFor="let latestPost of latestPostArray">
+            <app-post-card [postData]="latestPost"></app-post-card>
+        </div>
+    </div>
+</section>

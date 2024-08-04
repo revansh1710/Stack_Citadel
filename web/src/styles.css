@@ -1,0 +1,97 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #026467;
+    /* Dark teal */
+    --secondary-color: #E5F5EA;
+    /* Light mint green */
+    --body-text-color: #333333;
+    /* Dark gray for better contrast */
+    --navbar-footer-color: #F9F9F9;
+    /* Light gray */
+    --accent-color: #FFA500;
+    /* Orange for accents */
+    --background-color: #F0F0F0;
+    /* Light gray for the background */
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--body-text-color);
+    background-color: var(--background-color);
+}
+
+.collapse::content(show) {
+    display: -webkit--box;
+}
+
+
+.site-logo {
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--navbar-footer-color);
+}
+
+
+.navbar,
+.footer {
+    background-color: var(--navbar-footer-color);
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--primary-color);
+}
+
+.shadow-effect {
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgba(71, 114, 254, 0.3);
+}
+
+.bg-theme {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary-theme {
+    background-color: var(--secondary-color);
+}
+
+.text-theme-primary {
+    color: var(--primary-color);
+}
+
+.text-theme-accent {
+    color: var(--accent-color);
+}
+
+.input[type=text],
+.input[type=email] {
+    height: 60px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+}
+
+.btn-theme {
+    height: 58px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--navbar-footer-color);
+}
+
+.btn-theme:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.content-background {
+    background-color: var(--background-color);
+    padding: 20px;
+}

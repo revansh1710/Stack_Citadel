@@ -1,0 +1,17 @@
+@media (max-width: 576px) {
+    .featured-section .row>[class*='col-'] {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .featured-section {
+        padding: 15px 10px;
+    }
+
+    .featured-section h2,
+    .featured-section p {
+        margin: 0 auto;
+    }
+}
